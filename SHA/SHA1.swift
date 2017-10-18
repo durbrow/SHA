@@ -15,14 +15,7 @@ public class SHA1 {
     private var H2 : UInt32 = 0x98BADCFE
     private var H3 : UInt32 = 0x10325476
     private var H4 : UInt32 = 0xC3D2E1F0
-    private let W = UnsafeMutablePointer<UInt32>.allocate(capacity: 16) //[UInt32](repeating: 0, count: 16)
-    
-    init() {
-        W.initialize(to: 0, count: 16)
-    }
-    deinit {
-        W.deallocate(capacity: 16)
-    }
+    private var W = [UInt32](repeating: 0, count: 16)
 }
 
 private func ROL(_ X: UInt32, _ N: Int) -> UInt32 { return (X << N) | (X >> (32 - N)) }
