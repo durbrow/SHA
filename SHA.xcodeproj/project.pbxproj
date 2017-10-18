@@ -10,6 +10,7 @@
 		BE67ADBB1F96E7EE0036E3C9 /* SHA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE67ADB11F96E7EE0036E3C9 /* SHA.framework */; };
 		BE67ADC01F96E7EE0036E3C9 /* SHATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67ADBF1F96E7EE0036E3C9 /* SHATests.swift */; };
 		BE67ADC21F96E7EE0036E3C9 /* SHA.h in Headers */ = {isa = PBXBuildFile; fileRef = BE67ADB41F96E7EE0036E3C9 /* SHA.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE67ADCC1F96E81D0036E3C9 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE67ADCB1F96E81C0036E3C9 /* SHA1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		BE67ADBA1F96E7EE0036E3C9 /* SHATests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SHATests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE67ADBF1F96E7EE0036E3C9 /* SHATests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHATests.swift; sourceTree = "<group>"; };
 		BE67ADC11F96E7EE0036E3C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE67ADCB1F96E81C0036E3C9 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				BE67ADB41F96E7EE0036E3C9 /* SHA.h */,
 				BE67ADB51F96E7EE0036E3C9 /* Info.plist */,
+				BE67ADCB1F96E81C0036E3C9 /* SHA1.swift */,
 			);
 			path = SHA;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					BE67ADB01F96E7EE0036E3C9 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
 					BE67ADB91F96E7EE0036E3C9 = {
@@ -196,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE67ADCC1F96E81D0036E3C9 /* SHA1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +338,7 @@
 		BE67ADC61F96E7EE0036E3C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -347,6 +353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.me.kmdurbrow.SHA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -354,6 +361,7 @@
 		BE67ADC71F96E7EE0036E3C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -375,6 +383,7 @@
 		BE67ADC91F96E7EE0036E3C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SHATests/Info.plist;
@@ -388,6 +397,7 @@
 		BE67ADCA1F96E7EE0036E3C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = SHATests/Info.plist;
